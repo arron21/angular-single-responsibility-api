@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CatFactComponent } from "../components/cat-fact/cat-fact.component";
+import { AddObjectComponent } from "../components/add-object/add-object.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CatFactComponent, AddObjectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
