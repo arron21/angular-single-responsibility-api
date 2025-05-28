@@ -1,0 +1,8 @@
+<app-load-container [loading]="loading">
+    <h2>Posts</h2>
+    <ul>
+    @for (post of data; track post.id) {
+        <li>{{ post.title }}</li>
+    }
+    </ul>
+</app-load-container>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiMethod, SingleApiCall } from '../../app/class/single-api-call';
+import { API_METHOD, SingleApiCall } from '../../app/class/single-api-call';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -13,7 +13,7 @@ export class CatFactComponent extends SingleApiCall<{
   "length": number
 }> {
   override apiEndpoint = 'https://catfact.ninja/fact';
-  override apiMethod = ApiMethod.GET;
+  override apiMethod = API_METHOD.GET;
 
   constructor(http: HttpClient) {
     super(http);

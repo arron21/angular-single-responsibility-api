@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiMethod, SingleApiCall } from '../../app/class/single-api-call';
+import { API_METHOD, SingleApiCall } from '../../app/class/single-api-call';
 import { HttpClient } from '@angular/common/http';
 
 export interface AddObjParam {
@@ -30,7 +30,7 @@ export interface Data {
 })
 export class AddObjectComponent extends SingleApiCall<AddObjRes> {
   override apiEndpoint = 'https://api.restful-api.dev/objects';
-  override apiMethod = ApiMethod.POST;
+  override apiMethod = API_METHOD.POST;
 
   constructor(http: HttpClient) {
     super(http);
